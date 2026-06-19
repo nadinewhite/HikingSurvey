@@ -10,4 +10,9 @@ import NaturalLanguage
 
 class Scorer {
     let tagger = NLTagger(tagSchemes: [.sentimentScore])
+    
+    func score(_ text: String) {
+        tagger.string = text
+        
+    }
 }
