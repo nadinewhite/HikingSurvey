@@ -12,6 +12,10 @@ struct ContentView: View {
     var scorer = Scorer()
     
     func saveResponse(text: String) {
+        let score = scorer.score(text)
+        let response = Response(text: text, score: score)
+        responses.insert(response, at: 0)
+           
            
        }
     
