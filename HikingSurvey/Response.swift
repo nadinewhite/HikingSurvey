@@ -14,6 +14,10 @@ struct Response: Identifiable {
     
     var text: String
     
+    var sentiment: Sentiment {
+            Sentiment(score)
+        }
+    
     static let sampleResponses: [String] = [
         
         "The outdoors is my happy place, so give me a trail and some boots and I feel great!",
