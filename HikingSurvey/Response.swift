@@ -10,6 +10,7 @@ import Foundation
 
 struct Response: Identifiable {
     var id = UUID()
+    var score: Double
     
     var text: String
     

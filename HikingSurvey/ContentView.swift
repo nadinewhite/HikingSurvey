@@ -9,6 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
     @State var responses: [Response] = []
+    var scorer = Scorer()
+    
+    func saveResponse(text: String) {
+           
+       }
     
     var body: some View {
         
@@ -28,7 +33,7 @@ struct ContentView: View {
         
         .onAppear {
             for response in Response.sampleResponses {
-                           responses.insert(Response(text: response), at: 0)
+                saveResponse(text: response)
                        }
 
 
