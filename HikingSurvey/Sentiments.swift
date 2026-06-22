@@ -11,10 +11,10 @@ import Charts
 
 
 enum Sentiment: String, Plottable {
-
-    case positive
-    case negative
-    case moderate
+    case positive = "Positive"
+       case negative = "Negative"
+       case moderate = "Moderate"
+    
     
     
     
