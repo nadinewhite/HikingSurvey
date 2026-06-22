@@ -28,6 +28,19 @@ struct ChartView: View {
                     Sentiment.negative : Sentiment.negative.sentimentColor,
                     Sentiment.moderate : Sentiment.moderate.sentimentColor
                 ])
+        .chartBackground { chartProxy in
+            if let anchor = chartProxy.plotFrame {
+                let frame = geometry[anchor]
+                                  Image(systemName: "figure.hiking")
+                    .resizable()
+                                            .aspectRatio(contentMode: .fit)
+                                            .frame(height: frame.height * 0.4)
+                                            .foregroundStyle(Color(white: 0.59))
+                                      .position(x: frame.midX, y: frame.midY)
+
+                               
+                           }
+                }
         .chartLegend(position: .trailing, alignment: .center)
                
         .frame(height: 200)
