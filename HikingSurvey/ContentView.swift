@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State var responses: [Response] = []
+    @State private var responseText = ""
     var scorer = Scorer()
     
     func saveResponse(text: String) {
@@ -30,10 +31,16 @@ struct ContentView: View {
                 
                 ForEach(responses) { response in
                     ResponseView(response: response)
+                    HStack {
+                                    TextField("What do you think about hiking?", text: $responseText, axis: .vertical)
+                                        .textFieldStyle(.roundedBorder)
+                                        .lineLimit(5)
+                                    Button("Done") {
+
+
+                                    }
                                 }
-                            
-                        }
-               }
+                            }
         
         .onAppear {
             for response in Response.sampleResponses {
